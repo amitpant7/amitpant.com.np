@@ -1,0 +1,183 @@
+body {
+  background-color: black;
+  color: #00ff7d;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+}
+
+.container {
+  width: 80%;
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 10%;
+  position: relative;
+}
+nav {
+  background-color: #ff7f50c9;
+  padding: 14px;
+  margin-top: 10px;
+  text-align: center;
+  position: relative;
+}
+
+nav li {
+  list-style: none;
+  display: inline;
+  font-size: 20px;
+  font-family: monospace;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+nav li a {
+  text-decoration-style: none;
+  color: black;
+}
+nav li a:hover {
+  text-decoration-style: none;
+  color: white;
+}
+
+.intro {
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  background-image: url("Assets/wel.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 30%;
+}
+
+.intro h1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.social {
+  margin-top: 80px;
+}
+
+.social li a {
+  color: black;
+  background-color: white;
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.social h2 {
+  font-size: 28px;
+}
+
+.social li {
+  margin-top: 15px;
+  list-style-type: none;
+  padding: 10px;
+}
+.social li a:hover {
+  color: white;
+  background-color: coral;
+  padding: 13px;
+}
+
+.projects {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.project1,
+.project2,
+.project3 {
+  flex: 27%;
+  padding: 2%;
+}
+.project1 img,
+.project2 img,
+.project3 img {
+  width: 100%;
+  border: 3px solid coral;
+  border-radius: 15px;
+}
+
+.projects a {
+  color: #00ff7d;
+}
+.projects h2 {
+  text-align: center;
+}
+
+.projects a:hover {
+  color: coral;
+}
+.projects img:hover {
+  width: 96%;
+}
+
+.projectHeading {
+  position: relative;
+  text-align: center;
+  margin-top: 80px;
+  font-size: 35px;
+}
+
+footer {
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding-top: 20px;
+  font-style: italic;
+}
+footer a {
+  color: #00ff7d;
+  text-decoration: underline;
+}
+footer a:hover {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  nav li {
+    font-size: 18px;
+    margin: 0px;
+    padding: 3px;
+  }
+  .nav {
+    padding: 0px;
+    margin: 0px;
+  }
+  .container {
+    width: 100%;
+    margin: 3px;
+  }
+  .projects {
+    display: block;
+    align-items: center;
+  }
+  .social {
+    text-align: center;
+  }
+}
