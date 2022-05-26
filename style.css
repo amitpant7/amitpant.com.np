@@ -103,7 +103,7 @@ nav li a:hover {
 }
 
 .projects {
-  margin-top: 20px;
+  margin: 0px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
