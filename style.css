@@ -75,6 +75,7 @@ nav li a:hover {
 }
 
 .social {
+  position: relative;
   margin-top: 80px;
 }
 
@@ -159,6 +160,24 @@ footer a:hover {
   color: white;
 }
 
+#cat {
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+#cat h1 {
+  position: absolute;
+  bottom: 18%;
+  left: 35%;
+  background-color: black;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 @media only screen and (max-width: 600px) {
   nav li {
     font-size: 18px;
@@ -179,5 +198,14 @@ footer a:hover {
   }
   .social {
     text-align: center;
+  }
+  #cat {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  #cat h1 {
+    bottom: 10%;
+    left: 20%;
+    font-size: 21px;
   }
 }
