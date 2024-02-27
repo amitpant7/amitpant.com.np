@@ -34,3 +34,24 @@ function typewriter()
  }
 }
 typewriter();
+
+
+window.onresize = function(event) {
+    var windowWidth = window.innerWidth;
+    var fontSize;
+
+  
+    if (1000> windowWidth > 600) {
+  
+      fontSize = int(windowWidth/100)+1
+    } 
+  
+  else {
+      fontSize = 12;
+    }
+  
+    total_par = document.querySelectorAll('.project p');
+    for (var i = 0; i < total_par.length; i++){
+        total_par[i].style.fontSize = fontSize + 'pt'
+    }
+  }

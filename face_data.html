@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepali Celeb Localized Face Dataset</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .dataset-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Nepali Celeb Localized Face Dataset</h1>
+        <p>The dataset contains images of 49 famous individuals from Nepal, including actors, actresses, singers, and
+            social figures. The individuals vary in age, gender, and profession.</p>
+        <p>Potential uses for this dataset include face recognition, face detection, emotion recognition, and training
+            machine learning models related to facial analysis.</p>
+        <p>For more details and to access the dataset, visit <a
+                href="https://www.kaggle.com/datasets/amitpant7/nepali-celeb-localized-face-dataset"
+                target="_blank">Kaggle</a>.</p>
+        <h2>Procedure</h2>
+        <ol>
+            <li>Images of the actors were collected from the internet using a Python script.</li>
+            <li>The <code>bing_image_downloader</code> package was used to download images.</li>
+            <li>Images were manually verified for quality and unsuitable ones were removed.</li>
+            <li>OpenCV library was used to detect faces and crop images to extract only the face region.</li>
+            <li>The cropped face images were resized to a standard size.</li>
+            <li>Processed images were saved in a separate directory with appropriate naming convention.</li>
+        </ol>
+        <p>If you're interested in the technical details, you can check out the dataset on Kaggle and review the Python
+            scripts used for data collection and preprocessing.</p>
+        <a href="https://www.kaggle.com/datasets/amitpant7/nepali-celeb-localized-face-dataset" class="dataset-link"
+            target="_blank">Access the Dataset</a>
+    </div>
+</body>
+
+</html>

@@ -1,53 +1,81 @@
 body {
   background-color: black;
-  color: #00ff7d;
+  color: #05c964;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
+  color: red;
+}
+
+.intor h1 {
+  position: relative;
+  display: inline-block;
+  font-size: 24px; /* Adjust font size as needed */
+  color: white; /* Adjust text color as needed */
+  padding-bottom: 10px; /* Add padding to create space for the curvy line */
+}
+
+/* Style for the curvy line */
+.curvy-line {
+  position: relative;
+  width: 80%;
+  height: 10px; /* Adjust the height of the curvy line */
+  background-color: #0f9650; /* Adjust the color of the curvy line */
+  border-radius: 50%; /* Adjust the border radius to create a curved line */
+  overflow: hidden;
+}
+
+/* Style for the curved part of the line */
+.curvy-line:before {
+  content: "";
+  position: absolute;
+  top: -20px; /* Adjust the position to control the curvature */
+  left: -50%;
+  width: 200%;
+  height: 100px; /* Adjust the height to control the curvature */
+  border-radius: 50%;
+  background-color: #0f9650; /* Adjust the color of the curved part */
 }
 
 header {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 40px;
+  padding: 15px 0;
+  font: 700 40px/1 "Courier New", Courier, monospace;
   text-align: center;
-  font-weight: 700;
   color: white;
 }
 
 .container {
   width: 80%;
-  font-size: 18px;
-  font-family: "Courier New", Courier, monospace;
-  margin-left: 10%;
+  padding: 15px;
+  margin: 0 auto;
+  font: 18px/1 "Courier New", Courier, monospace;
   position: relative;
 }
+
 nav {
-  background-color: #ff7f50c9;
-  padding: 14px;
-  margin-top: 10px;
+  padding: 0 15 0 15px;
+  width: 80%;
+  margin: auto;
+  background-color: #0f9650;
+  height: 50px; /* Adjusted height */
+  line-height: 50px; /* Center text vertically */
   text-align: center;
-  position: relative;
 }
 
 nav li {
-  list-style: none;
-  display: inline;
+  display: inline-block; /* Changed to inline-block for better alignment */
   font-size: 20px;
-  font-family: monospace;
   font-weight: bold;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 10px; /* Adjusted padding */
 }
 
 nav li a {
-  text-decoration-style: none;
   color: black;
 }
+
 nav li a:hover {
-  text-decoration-style: none;
   color: white;
 }
 
@@ -55,28 +83,64 @@ nav li a:hover {
   position: relative;
 }
 
-.container::before {
-  content: "";
-  background-image: url("Assets/wel.jpg");
-  background-repeat: repeat;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 30%;
+button {
+  background-color: black; /* Green background */
+  border: none;
+  color: white; /* White text */
+  padding: 12px 30px; /* Padding */
+  text-align: center; /* Center text */
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add a shadow */
+  transition: 0.3s; /* Smooth transition on hover */
 }
 
-.intro h1 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: white;
+/* Change button color on hover */
+button:hover {
+  background-color: #0f9650;
+  color: black;
+}
+
+.container::after {
+  content: "";
+  background-image: url("Assets/ff.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  left: 0;
+  height: 40%;
+  width: 70%;
+  opacity: 0.3; /* Adjusted opacity value */
+}
+
+.container::before {
+  content: "";
+
+  background-image: url("Assets/yww.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  opacity: 0.4; /* Adjusted opacity value */
 }
 
 .social {
-  position: relative;
-  margin-top: 80px;
+  display: flex;
+  justify-content: center; /* Centers the flex items horizontally */
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .social li a {
@@ -96,52 +160,29 @@ nav li a:hover {
   list-style-type: none;
   padding: 10px;
 }
+
 .social li a:hover {
   color: white;
-  background-color: coral;
+  background-color: #ffd700;
   padding: 13px;
 }
 
-.projects {
-  margin: 0px;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.project1,
-.project2,
-.project3 {
-  flex: 27%;
-  padding: 2%;
-}
-.project1 img,
-.project2 img,
-.project3 img {
-  width: 100%;
-  border: 3px solid coral;
-  border-radius: 15px;
-}
-
 .projects a {
-  color: #00ff7d;
-}
-.projects h2 {
-  text-align: center;
+  color: black;
 }
 
 .projects a:hover {
-  color: coral;
+  color: #ffd700;
 }
+
 .projects img:hover {
   width: 96%;
 }
 
 .projectHeading {
   position: relative;
+  display: inline-block;
   text-align: center;
-  margin-top: 80px;
   font-size: 35px;
 }
 
@@ -152,60 +193,281 @@ footer {
   padding-top: 20px;
   font-style: italic;
 }
+
 footer a {
   color: #00ff7d;
   text-decoration: underline;
 }
+
 footer a:hover {
   color: white;
 }
 
 #cat {
-  align-items: center;
   text-align: center;
   position: relative;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin: 50px 15% 100px;
 }
+
 #cat h1 {
   position: absolute;
   bottom: 18%;
   left: 35%;
   background-color: black;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
+}
+
+.section {
+  color: white;
+  font-size: 18px;
+}
+
+.page_container {
+  width: 80%;
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0 auto;
+  position: relative;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+p {
+  padding-top: 5px;
+  font-size: 18px;
+}
+
+.section li {
+  padding-top: 8px;
+}
+
+.project_container {
+  position: relative;
+  padding-top: 50px;
+  margin-top: 90px;
+  display: flex;
+}
+
+.project_container::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 30%;
+  bottom: 0;
+  left: 0;
+  height: 60%;
+  width: 60%;
+  background-image: url("Assets/backprop.gif");
+  background-size: contain; /* Adjust to 'contain' if you want the image to be fully visible */
+  background-position: center center; /* Adjust the position as needed */
+  background-repeat: no-repeat; /* Ensure the background image doesn't repeat */
+  opacity: 0.4; /* Adjust the opacity of the background image */
+  z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+.projects {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-rows: repeat(2, auto); /* Two rows */
+  gap: 10px; /* Gap between grid items */
+}
+
+.project {
+  margin: 0 auto;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  padding-top: 10px;
+  background-color: white;
+  margin: 15px;
+  color: black;
+  border-radius: 30px;
+  font-weight: 800;
+}
+
+.project p {
+  text-align: center;
+  line-height: 1.6em;
+  font-size: 11pt;
+  font-weight: 500;
+  font-family: Lora, serif;
+}
+
+.project h2 {
+  text-align: center;
+  line-height: 1.6em;
+  font-size: 14pt;
+  font-weight: bolder;
+  font-family: Lora, serif;
+}
+
+.project img {
+  width: 100%;
+  max-height: 180px;
+}
+
+.heading {
+  width: 50%;
+  margin-right: auto;
+}
+
+.heading h2 {
+  padding-top: 50%;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+.separator {
+  width: 10px;
+  background-color: #0f9650;
+  margin-right: 50px;
+}
+
+.skills {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+}
+
+#skills_social {
+  padding: 20px;
+  position: relative; /* Needed for positioning the pseudo-element */
+  /* display: flex; */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  min-height: 200px; /* Set a minimum height */
+}
+
+#skills_social::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 70%;
+  width: 100%;
+  background-image: url("Assets/backvec.png");
+  background-size: contain; /* Adjust to 'contain' if you want the image to be fully visible */
+  background-position: center center; /* Adjust the position as needed */
+  background-repeat: repeat; /* Ensure the background image doesn't repeat */
+  opacity: 0.17; /* Adjust the opacity of the background image */
+  z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+.vertical h2 {
+  font-size: 18pt;
+  text-align: center;
+  display: block;
+}
+
+.vertical {
+  align-items: center;
+  align-content: center;
+  margin: auto;
+  margin-top: 15%;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 80%;
 }
 
 @media only screen and (max-width: 600px) {
-  nav li {
-    font-size: 18px;
-    margin: 0px;
-    padding: 3px;
-  }
-  .nav {
-    padding: 0px;
-    margin: 0px;
-  }
-  .container {
-    width: 100%;
-    margin: 3px;
-  }
-  .projects {
+  .project_container {
     display: block;
+  }
+  .heading {
+    width: 100%;
+    margin-top: 10px;
     align-items: center;
   }
+
+  .heading h2 {
+    padding: 10px;
+  }
+
+  .social li {
+    padding: 5px;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+
+  .projectHeading {
+    margin: auto;
+  }
+  .separator {
+    display: none;
+  }
+  .social {
+    align-items: center;
+    margin-top: 20px;
+  }
+  .social li {
+    align-items: center;
+    margin-top: 20px;
+  }
+  nav {
+    margin: 0px;
+    width: 100%;
+  }
+
+  nav li {
+    font-size: 18px;
+    padding: 0 5px; /* Adjusted padding */
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .projects {
+    padding: 0px;
+    display: block;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+  }
+
+  .project {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+  }
+
   .social {
     text-align: center;
   }
-  #cat {
-    margin-left: 5%;
-    margin-right: 5%;
+
+  .vertical {
+    display: block;
+    width: 100%;
   }
+
+  #cat {
+    margin: 50px 5% 100px;
+  }
+
   #cat h1 {
     bottom: 10%;
     left: 20%;
     font-size: 21px;
+  }
+  #skills_social {
+    margin: auto;
+    padding-top: 0px;
+    display: block;
+  }
+
+  .vertical h2 {
+    padding-top: 40px;
   }
 }

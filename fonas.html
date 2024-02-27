@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FONAS</title>
+</head>
+
+<body>
+    <header>Amit Pant</header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index#prj">Projects</a></li>
+            <li><a href="https://github.com/amitpant7">Github</a></li>
+            <li><a href="mailto:amitpant700@gmail.com">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="page_container">
+        <h1>FPGA-Optimized Neural Architecture Search for Enhanced Hardware Efficiency (FONAS)</h1>
+        <div class="section">
+            <p><b>Summary:</b>Searched
+                for the set of efficient deep neural architecture(FPGANets) for image classification with two costraints
+                arithmetic intensity and latency for FPGA that outperformed many existing networks in
+                terms of both latency and accuracy on ImageNet-1k</p>
+        </div>
+        <h4> Github: <a href="https://github.com/FPGA-Vision/FONAS">FONAS</a></h4>
+        <div class="section">
+            <h2>Project Work and Methodologies</h2>
+            <ul>
+                <li>Compressing EfficientNet-V2 to implement it on FPGA.</li>
+                <li>Leverage NAS techniques to automate the creation of task-specific neural networks targeting latency
+                    for
+                    FPGAs.</li>
+                <li>Hardware Optimization: Focusing on co-designing models and hardware to enhance efficiency and
+                    performance.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Hardware NAS Focus</h2>
+            <ul>
+                <li>Optimization Goals: Minimizing latency, maximizing accuracy, and efficient resource utilization on
+                    FPGA
+                    platforms.</li>
+                <li>Architecture Sampling: Generating diverse architectures meeting hardware constraints like latency
+                    and
+                    resource usage.</li>
+                <li>Evaluation Metrics: Assessing performance based on accuracy, inference speed, and resource
+                    utilization
+                    for optimal architecture selection.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Key Results and Findings</h2>
+            <ul>
+                <li>Compressed EfficientNet-V2: Implemented channel pruning to reduce EfficientNetV2’s channel count by
+                    88%
+                    resulting in a model that was 14 times smaller, 2.5 times faster in inference speed, and had 14
+                    times
+                    fewer parameters and 2.5 times fewer MAC operations.</li>
+                <li>Latency dataset for Ultra96v2 FPGA board was constructed.</li>
+                <li>Latency-aware networks and Networks with varying arithmetic intensity were discovered through an
+                    evolutionary search process.</li>
+                <li>Searched architectures (FPGAnets) have better performance than most of the existing architectures in
+                    terms of the trade-off of latency and accuracy.</li>
+            </ul>
+            <img src="Assets/res.png" width="50%" height="60%" class="center" alt="Results">
+        </div>
+        <div class="section">
+            <h2>Future Directions</h2>
+            <ul>
+                <li>Integration Challenges: Implementing optimized architectures on FPGA platforms seamlessly.</li>
+                <li>Validation Process: Verifying the effectiveness of optimized architectures on Ultra96-v2 FPGA
+                    boards.</li>
+                <li>Framework Refinement: Further enhancing the HW-NAS pipeline for improved efficiency and real-time
+                    performance.</li>
+
+            </ul>
+
+            <p>This project aims to contribute significantly to the field of image classification by showcasing the
+                benefits of HW-NAS and FPGA-based acceleration in achieving superior efficiency and real-time
+                performance metrics.</p>
+        </div>
+    </div>
+</body>
+
+</html>
